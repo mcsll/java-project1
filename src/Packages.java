@@ -30,8 +30,9 @@ public class Packages
         fileScan.close();
     }
 
+
     //-------------------------------------------------------------------------
-    // Returns a String 
+    // Returns a String object that shows all Packets in the shipment
     //-------------------------------------------------------------------------
     public String toString()
     {
@@ -45,8 +46,9 @@ public class Packages
         return shipmentListString;
     }
     
+    
     //-------------------------------------------------------------------------
-    // 
+    // Prints all Packets in the shipment that are heavy
     //-------------------------------------------------------------------------
     public void displayHeavyPackages()
     {
@@ -57,6 +59,10 @@ public class Packages
         }
     }
 
+
+    //-------------------------------------------------------------------------
+    // Prints all Packets in the shipment that are in-state
+    //-------------------------------------------------------------------------
     public void displayInStatePackages()
     {
         for ( Packet temp : shipmentList )
@@ -66,6 +72,11 @@ public class Packages
         }
     }
 
+    
+    //-------------------------------------------------------------------------
+    // Returns the Packet object with the heaviest weight out of all those 
+    // in the shipment
+    //-------------------------------------------------------------------------
     public Packet maxWeightPacket()
     {
         int maxWeightIndex = -1;
@@ -83,6 +94,10 @@ public class Packages
         return shipmentList.get(maxWeightIndex);
     }
 
+
+    //-------------------------------------------------------------------------
+    // 
+    //-------------------------------------------------------------------------
     public void displayAverageWeight()
     {
         // display average weight to 2 decimals using full sentence.
@@ -93,6 +108,10 @@ public class Packages
         System.out.println(String.format("%.2f", averageWeight));
     }
 
+
+    //-------------------------------------------------------------------------
+    // 
+    //-------------------------------------------------------------------------
     public void displayLocalPackets()
     {
         System.out.println("\nLOCAL PACKETS");
@@ -104,6 +123,10 @@ public class Packages
         }
     }
 
+
+    //-------------------------------------------------------------------------
+    // 
+    //-------------------------------------------------------------------------
     public void displayNonLocalPackets()
     {
         System.out.println("\nNONLOCAL PACKETS");
