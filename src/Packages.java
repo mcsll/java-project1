@@ -30,6 +30,9 @@ public class Packages
         fileScan.close();
     }
 
+    //-------------------------------------------------------------------------
+    // Returns a String 
+    //-------------------------------------------------------------------------
     public String toString()
     {
         String shipmentListString = "";
@@ -41,7 +44,10 @@ public class Packages
 
         return shipmentListString;
     }
-
+    
+    //-------------------------------------------------------------------------
+    // 
+    //-------------------------------------------------------------------------
     public void displayHeavyPackages()
     {
         for ( Packet temp : shipmentList )
