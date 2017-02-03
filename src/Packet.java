@@ -8,8 +8,6 @@ public class Packet
     private String stateOrig;
 
     private ArrayList<String> localStates = new ArrayList<String>();
-    
-    //private String[] localStates = {"CT", "MA", "RI", "NY"};
 
     public Packet(int idNumber, double weight, String stateDest, String stateOrig)
     {
@@ -17,6 +15,11 @@ public class Packet
         this.weight = weight;
         this.stateDest = stateDest;
         this.stateOrig = stateOrig;
+        
+        localStates.add("CT");
+        localStates.add("MA");
+        localStates.add("RI");
+        localStates.add("NY");
     }
 
 
@@ -64,11 +67,6 @@ public class Packet
     //-------------------------------------------------------------------------
     public String destinationLocation()
     {
-        localStates.add("CT");
-        localStates.add("MA");
-        localStates.add("RI");
-        localStates.add("NY");
-
         if ( localStates.contains(stateDest) )
             return "Local";
         
