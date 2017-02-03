@@ -8,6 +8,8 @@ public class Packet
     private String stateOrig;
 
     private ArrayList<String> localStates = new ArrayList<String>();
+    
+    //private String[] localStates = {"CT", "MA", "RI", "NY"};
 
     public Packet(int idNumber, double weight, String stateDest, String stateOrig)
     {

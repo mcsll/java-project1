@@ -96,7 +96,7 @@ public class Packages
 
 
     //-------------------------------------------------------------------------
-    // 
+    // Computes and prints the average weight of all Packets in shipment
     //-------------------------------------------------------------------------
     public void displayAverageWeight()
     {
@@ -110,7 +110,7 @@ public class Packages
 
 
     //-------------------------------------------------------------------------
-    // 
+    // Prints all Packets that are considered local
     //-------------------------------------------------------------------------
     public void displayLocalPackets()
     {
@@ -125,7 +125,7 @@ public class Packages
 
 
     //-------------------------------------------------------------------------
-    // 
+    // Prints all Packets that are considered non-local
     //-------------------------------------------------------------------------
     public void displayNonLocalPackets()
     {
