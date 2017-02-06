@@ -4,6 +4,8 @@ import java.io.*;
 public class Packages
 {
     private ArrayList<Packet> shipmentList = new ArrayList<Packet>();
+    
+    // Declare and initialize instance variable for tallying total weight
     private double totalWeight = 0.0;
 
     public Packages() throws IOException
@@ -13,7 +15,8 @@ public class Packages
         double w;
         String d;
         String o;
-
+        
+        // Open file with new Scanner object and read line into temp variables
         fileScan = new Scanner (new File("packetData.txt"));
         while (fileScan.hasNext())
         {
@@ -22,8 +25,10 @@ public class Packages
             d = fileScan.next();
             o = fileScan.next();
 
+            // Add new Packet object to shipmentList ArrayList
             shipmentList.add(new Packet(i, w, d, o));
 
+            // Add current Packet object weight to running total of shipment weight
             totalWeight += w;
         }
 
@@ -79,9 +84,15 @@ public class Packages
     //-------------------------------------------------------------------------
     public Packet maxWeightPacket()
     {
+        // Initialize variables used to perform comparison of weights
         int maxWeightIndex = -1;
         double currentMaxWeight = 0.0;
 
+        // For loop steps through each Packet object by its index, comparing
+        // the current Packet's weight to the largest weight encountered thus far.
+        // If the current Pcaket's weight exceeds this, the currentMaxWeight is 
+        // set to this weight and the index of this Packet is stored in the
+        // maxWeightIndex variable.
         for ( int i = 0; i < shipmentList.size(); i++ )
         {
             if ( shipmentList.get(i).getWeight() > currentMaxWeight )
@@ -100,11 +111,13 @@ public class Packages
     //-------------------------------------------------------------------------
     public void displayAverageWeight()
     {
-        // display average weight to 2 decimals using full sentence.
         double averageWeight;
-
+        
+        // Performs calculation of average weight using Packages instance 
+        // variable totalWeight and the size() method of the ArrayList class
         averageWeight = totalWeight / shipmentList.size();
 
+        // Prints averageWeight variable as formatted String
         System.out.println(String.format("%.2f", averageWeight));
     }
 

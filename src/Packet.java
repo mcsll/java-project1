@@ -16,6 +16,7 @@ public class Packet
         this.stateDest = stateDest;
         this.stateOrig = stateOrig;
         
+        // Populate the ArrayList of local states for later comparison
         localStates.add("CT");
         localStates.add("MA");
         localStates.add("RI");
@@ -44,7 +45,7 @@ public class Packet
 
     //-------------------------------------------------------------------------
     // Returns a String object that is a tab-separated combination of the 
-    // four parameters of the Packet, with a new line at the end.
+    // four parameters of the Packet, with a line break at the end.
     //-------------------------------------------------------------------------
     public String toString()
     {
