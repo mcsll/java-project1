@@ -14,7 +14,16 @@ public class Packet
     private String stateDest;
     private String stateOrig;
 
-    private ArrayList<String> localStates = new ArrayList<String>();
+    private static final ArrayList<String> LOCALSTATES;
+    static 
+    {
+        LOCALSTATES = new ArrayList<String>();
+        LOCALSTATES.add("CT");
+        LOCALSTATES.add("MA");
+        LOCALSTATES.add("RI");
+        LOCALSTATES.add("NY");
+    }
+
 
     public Packet(int idNumber, double weight, String stateDest, String stateOrig)
     {
@@ -22,12 +31,6 @@ public class Packet
         this.weight = weight;
         this.stateDest = stateDest;
         this.stateOrig = stateOrig;
-        
-        // Populate the ArrayList of local states for later comparison
-        localStates.add("CT");
-        localStates.add("MA");
-        localStates.add("RI");
-        localStates.add("NY");
     }
 
 
@@ -75,7 +78,7 @@ public class Packet
     //-------------------------------------------------------------------------
     public String destinationLocation()
     {
-        if ( localStates.contains(stateDest) )
+        if ( LOCALSTATES.contains(stateDest) )
             return "Local";
         
         return "NonLocal";
