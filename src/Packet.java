@@ -1,3 +1,10 @@
+/**
+ * CS152 Section 01, Project #1
+ * Packet class describes individual packet object
+ * @author (Matthew Sullivan) 
+ * @version (Feb 06, 2017)
+ */
+
 import java.util.*;
 
 public class Packet

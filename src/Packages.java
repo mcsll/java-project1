@@ -1,3 +1,10 @@
+/**
+ * CS152 Section 01, Project #1
+ * Packages class describes collections of Packet objects (shipments)
+ * @author (Matthew Sullivan) 
+ * @version (Feb 06, 2017)
+ */
+
 import java.util.*;
 import java.io.*;
 

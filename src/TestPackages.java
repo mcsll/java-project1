@@ -1,3 +1,10 @@
+/**
+ * CS152 Section 01, Project #1
+ * TestPackages contains main routine
+ * @author (Matthew Sullivan) 
+ * @version (Feb 06, 2017)
+ */
+
 import java.io.*;
 
 public class TestPackages
